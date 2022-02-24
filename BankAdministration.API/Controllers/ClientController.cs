@@ -2,7 +2,7 @@
 using BankAdministration.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
- 
+
 namespace BankAdministration.API.Controllers
 {
     [Route("api/client")]

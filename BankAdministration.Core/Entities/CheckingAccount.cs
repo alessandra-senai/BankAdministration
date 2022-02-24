@@ -29,8 +29,13 @@ namespace BankAdministration.Core.Entities
             }
 
             Limit -= value;
+        }
 
-
+        public void Deposit(decimal balance)
+        {
+            
+            SetBalance(Balance + balance);
+            
         }
     }
 }

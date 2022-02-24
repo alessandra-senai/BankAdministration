@@ -28,6 +28,29 @@ namespace BankAdministration.Core.Entities
             Client = client;
         }
 
+        public void OpenAccount(string password, decimal balance)
+        {
+            SetPassword(password);
+
+            SetBalance(balance);
+            AccountSituation = AccountSituationEnum.Created;
+            AccountCreated = DateTime.Now;
+
+        }
+       
+        protected void SetBalance(decimal balance)
+        {
+            Balance = balance;
+        }
+
+
+
+        private void SetPassword(string password)
+        {
+            Password = password;
+        }
+
+
         //método referente à sacar valor na conta
         public void WithdrawAccount(decimal value, string password)
         {
